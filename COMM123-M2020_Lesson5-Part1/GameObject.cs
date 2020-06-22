@@ -12,7 +12,7 @@ namespace COMM123_M2020_Lesson5_Part1
         //PRIVATE INSTANCE MEMBERS(FIELDS)
         private string m_name;
         //PUBLIC PROP
-        public Transform Transform { get; set; }
+        public Transform transform { get; set; }
 
         public string Name
         {
@@ -30,9 +30,22 @@ namespace COMM123_M2020_Lesson5_Part1
         public GameObject(string name)
         {
             Name = name;
+            m_intialize();
         }
 
         //PRIVATE METHODS
+        private void m_intialize()
+        {
+            transform=new Transform();
+        }
+
+        public override string ToString()
+        {
+            string outputString = "";
+            outputString += $"Name    : {Name}\n";
+            outputString += transform.ToString();
+            return outputString;
+        }
 
         //PUBLIC METHODS
 
