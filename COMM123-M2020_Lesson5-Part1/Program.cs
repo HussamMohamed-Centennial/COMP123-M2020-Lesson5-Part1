@@ -18,7 +18,7 @@ namespace COMM123_M2020_Lesson5_Part1
             BossEnemy bossEnemy=new BossEnemy();
             
             player.RaiseShields();
-            player.transform.postion=new Vector2D(60.0f,80.0f);
+            player.transform.postion=new Vector2D(100.0f,50.0f);
             Console.WriteLine(player.ToString());
 
             
@@ -39,7 +39,11 @@ namespace COMM123_M2020_Lesson5_Part1
             //Console.WriteLine(player.transform.ToString());
             //Console.WriteLine(player.ToString());
 
+            player.transform.postion=Vector2D.Right();
 
+            player.transform.postion+=Vector2D.Right();
+            Console.WriteLine(player.ToString());
+            
             //player.transform.postion.x = 10.0f;
 
 
